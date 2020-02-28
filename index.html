@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Lista zadań</title>
+</head>
+
+<body>
+<div class="container">
+<!-- Header -->
+    <div class="card">
+        <div class="card-body">
+            <input class="form-control" type="text" id="myInput" placeholder="Co trzeba wykonać?"
+                   onkeydown = "if (event.keyCode == 13) document.getElementById('btnTask').click()">
+            <button class="btn btn-primary" id="btnTask" onclick="addTodo()">Dodaj task</button>
+        </div>
+    </div>
+<!-- End of Header -->
+
+<!-- Tasks list -->
+    <div class="task-list">
+        <h4>Lista zadań</h4>
+    </div>
+    <ul id="todoList"></ul>
+    <div class="completed-task">
+        <h4>Ukończone taski</h4>
+    </div>
+
+<!-- End of Tasks -->
+</div>
+
+<!-- Bootstrap & Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/todo.js"></script>
+
+</body>
+</html>
